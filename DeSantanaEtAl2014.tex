@@ -1,0 +1,112 @@
+% Template for PLoS
+% Version 1.0 January 2009
+%
+% To compile to pdf, run:
+% latex Asymmetry
+% bibtex Asymmetry
+% latex Asymmetry
+% latex Asymmetry
+% dvipdf Asymmetry
+
+\documentclass[12pt]{article}
+
+% amsmath package, useful for mathematical formulas
+\usepackage{amsmath}
+% amssymb package, useful for mathematical symbols
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}  
+\usepackage{verbatim}
+\usepackage{float}
+\floatstyle{boxed} 
+\restylefloat{figure}
+% citep package, to clean up citations in the main text. Do not remove.
+%\usepackage{cite}
+\usepackage{natbib}
+\usepackage{mathtools}
+%\usepackage{color} 
+%\newcommand{\co}[1]{{\color{red} #1}}   
+% Use doublespacing - comment out for single spacing
+%\usepackage{setspace} 
+%\doublespacing
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+% Text layout
+\topmargin 0.0cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\textwidth 16cm 
+\textheight 21cm
+
+% Bold the 'Figure #' in the caption and separate it with a period
+% Captions will be left justified
+%\usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
+
+% Use the PLoS provided bibtex style
+
+% Remove brackets from numbering in List of References
+%\makeatletter
+%\renewcommand{\@biblabel}[1]{\quad#1.}
+%\makeatother
+
+% Leave date blank
+\date
+
+\pagestyle{myheadings}
+%% ** EDIT HERE **
+%* EDIT HERE **
+%% PLEASE INCLUDE ALL MACROS BELOW
+
+%% END MACROS SECTION
+
+\begin{document}
+\thispagestyle{empty}
+% Title must be 150 characters or less
+\begin{flushleft}
+%{\Large
+%\textbf{Preparatory Project Application\\ Swiss National Supercomputing Centre}\\ 
+  \vspace{0.25 in} {\Large }
+% Insert Author names, affiliations and corresponding author email.
+\\
+ \vspace{0.25 in} 
+\\
+
+\end{flushleft}
+
+\vspace{0.3 in}
+
+\section*{Methods}
+
+\subsection*{Trophic overlapping and asymmetry}
+
+We aim to quantify the overlapping of shared resources between pair of
+species $i$ and $j$ in each site $k$ \citep{Araujoetal:2011}. Thus, the proportion of
+interactions of species $i$ that overlaps with $j$ in site $k$ is
+\begin{equation}
+  O(i,j)_{k} = \frac{(i \cap j)}{d(i)_{k}},
+\label{dispfreq}
+\end{equation}
+where $(i \cap j)$ is the overlapping in shared interactions between
+species $i$ and $j$ in site $k$ and $d(i)_{k}$ is the degree of
+species $i$ in site $k$. The proportion of interactions of species $j$
+that overlaps with $i$ in site $k$ is
+\begin{equation}
+  O(j,i)_{k} = \frac{(i \cap j)}{d(j)_{k}},
+\label{dispfreq}
+\end{equation}
+and the degree of symmetry between species $i$ and $j$ in site $k$ is 
+\begin{equation}
+  S(i,j)_{k} = \frac{\abs{O(i,j)_{k} - O(j,i)_{k}}}{Max[O(i,j)_{k};O(j,i)_{k}]},
+\label{dispfreq}
+\end{equation}
+
+
+\newpage
+
+\bibliographystyle{ecol_let}
+\bibliography{Asymmetry}
+\end{document}
